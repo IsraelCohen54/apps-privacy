@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Zmanim Alarm</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1c1e;
+    --muted: #5a5f66;
+    --rule: #e2e5e9;
+    --accent: #2c5f8a;
+    --card: #f5f7f9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14171a;
+      --fg: #e6e8eb;
+      --muted: #a0a6ad;
+      --rule: #2a2f35;
+      --accent: #7fb3d9;
+      --card: #1c2025;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 2.5rem 1.25rem 4rem;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  main { max-width: 46rem; margin: 0 auto; }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 .35rem; }
+  h2 {
+    font-size: 1.15rem; margin: 2.5rem 0 .75rem;
+    padding-top: 1.25rem; border-top: 1px solid var(--rule);
+  }
+  h3 { font-size: 1rem; margin: 1.5rem 0 .5rem; }
+  .meta { color: var(--muted); font-size: .9rem; margin: 0 0 2rem; }
+  .lede {
+    background: var(--card); border-inline-start: 3px solid var(--accent);
+    padding: 1rem 1.25rem; border-radius: 4px; margin: 0 0 1rem;
+  }
+  a { color: var(--accent); }
+  table { border-collapse: collapse; width: 100%; font-size: .92rem; margin: 1rem 0; }
+  th, td { text-align: start; padding: .55rem .6rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  th { font-weight: 600; }
+  code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .88em; }
+  .wrap { overflow-x: auto; }
+  section[dir="rtl"] { text-align: right; }
+  footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .88rem; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Privacy Policy — Zmanim Alarm</h1>
+<p class="meta">Effective 13 August 2026 · Applies to the Android and iOS app <strong>Zmanim Alarm</strong> (<code>io.github.israelcohen54.zmanimalarm</code>)</p>
+
+<p class="lede"><strong>Zmanim Alarm collects no personal data.</strong> It has no user accounts, no analytics, no advertising, and no servers. Nothing you do in the app is transmitted anywhere, because the app does not connect to the internet at all.</p>
+
+<h2>What the app accesses on your device</h2>
+
+<h3>Location</h3>
+<p>If you allow it, the app reads your device's GPS position. It is used for two things, both entirely on your device:</p>
+<ul>
+  <li>Calculating the daily halachic times (zmanim) for where you actually are.</li>
+  <li>Warning you when your saved location no longer matches where you are, so your times don't quietly become wrong.</li>
+</ul>
+<p>You may instead pick a city from a list that ships inside the app, in which case the GPS is not used at all. Your location never leaves your device.</p>
+
+<h3>Compass</h3>
+<p>The prayer-direction compass reads your device's GPS and magnetic sensor. The bearing to Jerusalem is calculated on the device. A location you save for the compass is stored on the phone alone and is deleted when you uninstall the app.</p>
+
+<h3>Custom ringtones</h3>
+<p>If you choose one of your own audio files as an alarm sound, the app reads that file to play it. It is not copied, uploaded, or examined for anything else.</p>
+
+<h2>What the app collects: nothing</h2>
+<p>There are no user accounts, no usage tracking, no crash reporting, no advertising identifiers, and no third-party SDKs that gather data. No information is sent to us or to anyone else, because there is nowhere for it to be sent.</p>
+<p>On Android this is enforced at the operating-system level: <strong>the released app is built without the internet permission</strong>. Android will not permit it to open a network connection even if a future bug tried to. Everything the app needs is bundled inside it — the zmanim calculations, the timezone database, the list of cities, the geomagnetic model and the fonts.</p>
+
+<h2>Permissions, and why each one is requested</h2>
+<p>None of these transmit data. They are all local device functions.</p>
+<div class="wrap">
+<table>
+  <tr><th>Permission</th><th>Why the app needs it</th></tr>
+  <tr><td>Location (fine / coarse)</td><td>Calculate zmanim for your position, and detect when your saved location is stale.</td></tr>
+  <tr><td>Exact alarms</td><td>Ring at the exact minute a zman falls on. An inexact alarm may fire many minutes late.</td></tr>
+  <tr><td>Run at startup</td><td>Re-arm your alarms after the device restarts, so they are not silently lost.</td></tr>
+  <tr><td>Foreground service &amp; wake lock</td><td>Keep playing the alarm sound and recalculating times reliably while the screen is off.</td></tr>
+  <tr><td>Ignore battery optimisation</td><td>Optional. Stops aggressive battery savers from delaying or dropping an alarm.</td></tr>
+  <tr><td>Notifications</td><td>Show alarms, pre-alarm warnings and calendar reminders.</td></tr>
+  <tr><td>Do Not Disturb access</td><td>Automatically silence the phone during prayer times, and let your alarms sound through Do Not Disturb.</td></tr>
+  <tr><td>Full-screen intent &amp; display over other apps</td><td>Show the ringing alarm screen over the lock screen, and launch it from the background when the alarm fires.</td></tr>
+  <tr><td>Vibration</td><td>Vibrate when an alarm rings.</td></tr>
+  <tr><td>Read audio files</td><td>Let you choose your own file as an alarm ringtone.</td></tr>
+</table>
+</div>
+
+<h2>Links to other websites</h2>
+<p>The app contains links to outside sites, such as yeshiva.org.il and ChaiTables, which explain the halachic sources the times follow. These open in your own browser, and only when you tap them. Once you leave the app, the privacy policy of that site applies, not this one.</p>
+
+<h2>Children</h2>
+<p>The app is not directed at children and collects no data from anyone, of any age.</p>
+
+<h2>Changes to this policy</h2>
+<p>If the app ever changes in a way that affects this policy, this page will be updated and the effective date above will change. Because the app is offline by design, any future feature that required a network connection would be a significant change and would be described here.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or about the app: <a href="mailto:IsraelCohen54@gmail.com">IsraelCohen54@gmail.com</a></p>
+
+<hr style="border:0;border-top:1px solid var(--rule);margin:3rem 0 0">
+
+<section dir="rtl" lang="he">
+<h2>מדיניות פרטיות — זמנים, שעון מעורר</h2>
+<p class="meta">בתוקף מ-13 באוגוסט 2026</p>
+
+<p class="lede"><strong>האפליקציה אינה אוספת נתונים אישיים.</strong> אין בה חשבונות משתמש, אין מעקב שימוש, אין פרסומות ואין שרתים. שום דבר ממה שנעשה באפליקציה אינו נשלח לשום מקום, מפני שהאפליקציה כלל אינה מתחברת לאינטרנט.</p>
+
+<h3>מה האפליקציה קוראת במכשיר</h3>
+<p>אם ניתנה הרשאה, האפליקציה קוראת את מיקום ה-GPS של המכשיר. הוא משמש לשני דברים, שניהם במכשיר עצמו בלבד: חישוב הזמנים ההלכתיים היומיים למקום שבו נמצאים, והתרעה כאשר המיקום השמור אינו תואם עוד למקום שבו נמצאים בפועל. אפשר גם לבחור יישוב מתוך רשימה המובנית באפליקציה, ואז ה-GPS אינו בשימוש כלל. המיקום אינו יוצא מהמכשיר.</p>
+<p>מצפן כיוון התפילה פועל באותו אופן: הוא קורא רק את ה-GPS ואת חיישן המגנט, והכיוון לירושלים מחושב במכשיר עצמו. מיקום שנשמר עבור המצפן נשמר במכשיר בלבד ונמחק עם הסרת האפליקציה.</p>
+
+<h3>מה נאסף: כלום</h3>
+<p>אין איסוף נתונים, אין דיווח קריסות, אין מזהי פרסום ואין ערכות פיתוח של צד שלישי האוספות מידע. באנדרואיד הדבר נאכף ברמת מערכת ההפעלה: <strong>הגרסה המופצת נבנית ללא הרשאת אינטרנט כלל</strong>, ולכן אין באפשרותה לפתוח חיבור לרשת גם לא בטעות. כל מה שהאפליקציה צריכה נמצא בתוכה — חישובי הזמנים, נתוני אזורי הזמן, רשימת היישובים, המודל הגאומגנטי והגופנים.</p>
+
+<h3>הרשאות</h3>
+<p>ההרשאות שהאפליקציה מבקשת (מיקום, התראות מדויקות, הפעלה לאחר הדלקה, שירות חזית, גישה ל"נא לא להפריע", התראות, הצגה מעל אפליקציות אחרות, רטט וקריאת קובצי שמע) משמשות כולן פעולות מקומיות במכשיר — הפעלת ההתראה בזמן המדויק, השתקת הטלפון בזמני התפילה, והשמעת צלצול שנבחר. אף אחת מהן אינה מעבירה מידע החוצה.</p>
+
+<h3>קישורים חיצוניים</h3>
+<p>באפליקציה יש קישורים לאתרים חיצוניים (yeshiva.org.il, ChaiTables) המסבירים את המקורות ההלכתיים שעליהם מבוססים הזמנים. הם נפתחים בדפדפן שלך ורק בלחיצה שלך, ומאותו רגע חלה מדיניות הפרטיות של אותו אתר.</p>
+
+<h3>יצירת קשר</h3>
+<p>לשאלות בנוגע למדיניות זו או לאפליקציה: <a href="mailto:IsraelCohen54@gmail.com">IsraelCohen54@gmail.com</a></p>
+</section>
+
+<footer>
+  Zmanim Alarm · <a href="../">All app privacy policies</a>
+</footer>
+
+</main>
+</body>
+</html>
