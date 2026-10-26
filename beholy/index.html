@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Beholy</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1c1e;
+    --muted: #5a5f66;
+    --rule: #e2e5e9;
+    --accent: #2c5f8a;
+    --card: #f5f7f9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14171a;
+      --fg: #e6e8eb;
+      --muted: #a0a6ad;
+      --rule: #2a2f35;
+      --accent: #7fb3d9;
+      --card: #1c2025;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 2.5rem 1.25rem 4rem;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  main { max-width: 46rem; margin: 0 auto; }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 .35rem; }
+  h2 {
+    font-size: 1.15rem; margin: 2.5rem 0 .75rem;
+    padding-top: 1.25rem; border-top: 1px solid var(--rule);
+  }
+  h3 { font-size: 1rem; margin: 1.5rem 0 .5rem; }
+  .meta { color: var(--muted); font-size: .9rem; margin: 0 0 2rem; }
+  .lede {
+    background: var(--card); border-inline-start: 3px solid var(--accent);
+    padding: 1rem 1.25rem; border-radius: 4px; margin: 0 0 1rem;
+  }
+  a { color: var(--accent); }
+  table { border-collapse: collapse; width: 100%; font-size: .92rem; margin: 1rem 0; }
+  th, td { text-align: start; padding: .55rem .6rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  th { font-weight: 600; }
+  code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .88em; }
+  .wrap { overflow-x: auto; }
+  section[dir="rtl"] { text-align: right; }
+  footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .88rem; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Privacy Policy — Beholy</h1>
+<p class="meta">Effective 26 October 2026 · Applies to the Android app <strong>Beholy</strong> (<code>io.github.israelcohen54.beholy</code>)</p>
+
+<p class="lede"><strong>Beholy collects no personal data.</strong> It has no user accounts, no analytics, no advertising and no servers. What you write and mark stays on your phone: the released app is built without the internet permission, so it cannot send anything anywhere. The only copies made are your phone's own backups, if you use them (see <a href="#backup">Backup</a>).</p>
+
+<h2>What the app keeps on your device</h2>
+<p>To work, Beholy stores the following in its own private storage on your phone. None of it leaves the device through the app.</p>
+<ul>
+  <li><strong>Your practices</strong> — what you write, and the details you choose for each one (which days, an optional time, how hard it is, its area).</li>
+  <li><strong>Your marks</strong> — each time you mark a practice (or undo a mark), with its date and time; and the short note you write when you make up a missed day.</li>
+  <li><strong>Your settings</strong> — language, form of address, the app's look and its theme.</li>
+  <li><strong>Which achievement medals you have already been shown</strong>, so the same one is not announced twice.</li>
+  <li><strong>Your phone's time-zone changes</strong>, so a flight across time zones is not mistaken for a missed day.</li>
+</ul>
+<p>Your light, levels, streaks, achievements and personal bests are not stored as such; they are worked out on the phone from your marks each time.</p>
+
+<h3>Shabbat and holiday times</h3>
+<p>The app calculates Shabbat and Yom Tov times on the device, from a calendar built into the app and your phone's time zone (when your phone is on Israel time, it uses Jerusalem's times). It does not ask for, read or use your location.</p>
+
+<h3>Home-screen widget</h3>
+<p>If you add Beholy's widget to your home screen, it shows today's practices there (their titles, how many are kept, and your streak's day) and lets you mark them. Anyone who can see your home screen can see them. The widget reads its contents from the app's private storage on the phone, where the app also notes your phone's language for it.</p>
+
+<h2>What the app collects: nothing</h2>
+<p>There is no sign-in, no usage tracking, no crash reporting, no advertising identifier and no third-party SDK that gathers data. Nothing is sent to us or to anyone else. On Android this is enforced by the operating system: <strong>the released app is built without the internet permission</strong>, so it cannot open a network connection.</p>
+
+<h2>Permissions, and why each one is there</h2>
+<p>None of these transmit data.</p>
+<div class="wrap">
+<table>
+  <tr><th>Permission</th><th>Why</th></tr>
+  <tr><td>Run at startup</td><td>Keep the home-screen widget up to date after the phone restarts, and turn it over to the new day on time.</td></tr>
+  <tr><td>Wake lock &amp; foreground service</td><td>Added by Android's background-work library, so a mark made from the widget is finished and saved even when the app is closed.</td></tr>
+  <tr><td>View network state</td><td>Added by the same library. It can only tell whether the phone is connected; without the internet permission the app cannot connect.</td></tr>
+</table>
+</div>
+
+<h2 id="backup">Backup</h2>
+<p>If backup is turned on in your phone's own settings, Android may include Beholy's data in your device backup to your Google account, so it can be restored on a new phone. Setting up a new phone directly from this one may copy it too. Those copies are made and kept by Android and Google under Google's privacy policy; we have no access to them. You can turn backup off in your phone's settings.</p>
+
+<h2>Deleting your data</h2>
+<p>Uninstalling the app, or clearing its storage in your phone's settings, deletes everything it kept on the device. A Google backup made earlier stays until you delete it in your Google account.</p>
+
+<h2>Children</h2>
+<p>The app is not directed at children and collects no data from anyone, of any age.</p>
+
+<h2>Changes to this policy</h2>
+<p>If the app changes in a way that affects this policy, this page will be updated and the effective date above will change. Any new permission (for example notifications for reminders, or your location for Shabbat times) and any way for data to leave the phone would be described here first.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or about the app: <a href="mailto:IsraelCohen54@gmail.com">IsraelCohen54@gmail.com</a></p>
+
+<hr style="border:0;border-top:1px solid var(--rule);margin:3rem 0 0">
+
+<section dir="rtl" lang="he">
+<h2>מדיניות פרטיות — Beholy</h2>
+<p class="meta">בתוקף מ-26 באוקטובר 2026</p>
+
+<p class="lede"><strong>Beholy אינה אוספת נתונים אישיים.</strong> אין בה חשבונות משתמש, אין מעקב שימוש, אין פרסומות ואין שרתים. מה שנכתב ומסומן בה נשאר בטלפון: הגרסה המופצת נבנית ללא הרשאת אינטרנט, ולכן אין באפשרותה לשלוח דבר לשום מקום. העותקים היחידים הם הגיבויים של הטלפון עצמו, אם משתמשים בהם (ראו "גיבוי" למטה).</p>
+
+<h3>מה נשמר במכשיר</h3>
+<p>כדי לפעול, האפליקציה שומרת באחסון הפרטי שלה בטלפון:</p>
+<ul>
+  <li><strong>ההנהגות</strong> — מה שנכתב, והפרטים שנבחרו לכל אחת (באילו ימים, שעה אם נקבעה, רמת הקושי, התחום).</li>
+  <li><strong>הסימונים</strong> — כל סימון של הנהגה (או ביטולו), עם התאריך והשעה; וההערה הקצרה שנכתבת בהשלמת יום שהוחמץ.</li>
+  <li><strong>ההגדרות</strong> — שפה, צורת פנייה, המראה וערכת הנושא.</li>
+  <li><strong>אילו הישגים כבר הוצגו</strong>, כדי שאותו הישג לא יוכרז פעמיים.</li>
+  <li><strong>שינויי אזור הזמן של הטלפון</strong>, כדי שטיסה בין אזורי זמן לא תיחשב ליום שהוחמץ.</li>
+</ul>
+<p>האור, הדרגות, הרצפים, ההישגים והשיאים אינם נשמרים כשלעצמם; הם מחושבים בטלפון מתוך הסימונים בכל פעם מחדש.</p>
+<p>זמני השבת והחג מחושבים במכשיר, לפי לוח השנה המובנה באפליקציה ואזור הזמן של הטלפון (כשהטלפון מכוון לשעון ישראל, לפי זמני ירושלים). האפליקציה אינה מבקשת, קוראת או משתמשת במיקום.</p>
+<p>אם מוסיפים את הווידג'ט של Beholy למסך הבית, הוא מציג שם את ההנהגות של היום (שמותיהן, כמה סומנו, והיום ברצף) ומאפשר לסמן אותן. כל מי שרואה את מסך הבית רואה גם אותם. הווידג'ט קורא את תוכנו מהאחסון הפרטי של האפליקציה, ושם היא גם רושמת עבורו את שפת הטלפון.</p>
+
+<h3>מה נאסף: כלום</h3>
+<p>אין התחברות, אין מעקב שימוש, אין דיווח קריסות, אין מזהי פרסום ואין ערכות פיתוח של צד שלישי האוספות מידע. באנדרואיד הדבר נאכף ברמת מערכת ההפעלה: <strong>הגרסה המופצת נבנית ללא הרשאת אינטרנט</strong>, ולכן אין באפשרותה לפתוח חיבור לרשת.</p>
+
+<h3>הרשאות</h3>
+<p>ההרשאות הנדרשות: הפעלה לאחר הדלקת הטלפון (כדי שהווידג'ט יתעדכן ויעבור ליום החדש בזמן), נעילת השכמה ושירות חזית (נוספות על ידי ספריית העבודה ברקע של אנדרואיד, כדי שסימון מהווידג'ט יישמר גם כשהאפליקציה סגורה), וצפייה במצב הרשת (נוספת על ידי אותה ספרייה; היא רק יודעת אם הטלפון מחובר, ובלי הרשאת אינטרנט אין באפשרות האפליקציה להתחבר). אף אחת מהן אינה מעבירה מידע.</p>
+
+<h3>גיבוי</h3>
+<p>אם הגיבוי מופעל בהגדרות הטלפון, אנדרואיד עשוי לכלול את נתוני האפליקציה בגיבוי המכשיר לחשבון Google, כדי לשחזר אותם בטלפון חדש. גם הגדרת טלפון חדש ישירות מהטלפון הזה עשויה להעתיק אותם. העותקים האלה נעשים ונשמרים על ידי אנדרואיד ו-Google לפי מדיניות הפרטיות של Google, ואין לנו גישה אליהם. אפשר לכבות את הגיבוי בהגדרות הטלפון.</p>
+
+<h3>מחיקה</h3>
+<p>הסרת האפליקציה, או ניקוי האחסון שלה בהגדרות הטלפון, מוחקים את כל מה שנשמר במכשיר. גיבוי ב-Google שנעשה קודם לכן נשאר עד שמוחקים אותו בחשבון Google.</p>
+
+<h3>ילדים</h3>
+<p>האפליקציה אינה מיועדת לילדים, ואינה אוספת נתונים מאיש, בשום גיל.</p>
+
+<h3>שינויים במדיניות</h3>
+<p>אם האפליקציה תשתנה באופן שנוגע למדיניות זו, הדף הזה יעודכן ותאריך התוקף ישתנה. כל הרשאה חדשה (למשל התראות לתזכורות, או מיקום לזמני השבת) וכל דרך שבה נתונים יוצאים מהטלפון יתוארו כאן מראש.</p>
+
+<h3>יצירת קשר</h3>
+<p>לשאלות בנוגע למדיניות זו או לאפליקציה: <a href="mailto:IsraelCohen54@gmail.com">IsraelCohen54@gmail.com</a></p>
+</section>
+
+<footer>
+  Beholy · <a href="../">All app privacy policies</a>
+</footer>
+
+</main>
+</body>
+</html>

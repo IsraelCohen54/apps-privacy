@@ -15,6 +15,7 @@ and an index the reviewer has to navigate is a common rejection cause.
 ```
 index.html                → landing page (lists the apps)
 zmanim-alarm/index.html   → https://israelcohen54.github.io/apps-privacy/zmanim-alarm/
+beholy/index.html         → https://israelcohen54.github.io/apps-privacy/beholy/
 ```
 
 ## Adding an app
