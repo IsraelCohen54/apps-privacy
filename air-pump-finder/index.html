@@ -90,6 +90,9 @@
 <h3>Phone number</h3>
 <p>You sign in with your phone number. Google, through Firebase Authentication, sends you a code by SMS. We use the number to give each person one account. Other users never see it.</p>
 
+<h3>Google sign-in (optional)</h3>
+<p>You can also link your Google account, so that you sign in again with one tap instead of an SMS code. Your phone number is still required. Firebase Authentication then also keeps the email address, name and profile-picture link of that Google account. We use only the email, and only as described under "Repeated false reports" below; other users never see any of it. You can unlink Google at any time in the app (Settings → Account): Google sign-in stops, and your account keeps working with the phone number. The name and picture link are removed then. The email stays with your account until it is deleted, because it keeps the false-report lock honest. A Google sign-in that never gets a phone number is deleted after 30 days unused.</p>
+
 <h3>Display name</h3>
 <p>You choose a display name when you register. Everyone using the app, guests included, sees it next to your current reports.</p>
 <p>If you are set up as a station owner or worker, we keep that role and the stations it applies to. It is shown as a label on your reports, and it stops you judging your own station or ones nearby. It is removed when your account is deleted.</p>
@@ -147,7 +150,7 @@
 
 <h2 id="liar-hash">Repeated false reports: what we keep after deletion</h2>
 <p>If several drivers contradict your reports, you are locked out of marking pumps as working for a while. Deleting your account, or removing your number from it, and registering again must not end that lock early.</p>
-<p>So, <strong>only while your account is in this locked state</strong>, we keep one-way, keyed hashes of your phone number and of any verified email address linked to your account (the app signs in by phone only today). They are deleted when the lock ends. <strong>If your account is deleted while it is locked</strong>, the hashes are kept with only: when the lock ends, and how many times this has happened. No name, no reports, no account ID.</p>
+<p>So, <strong>only while your account is in this locked state</strong>, we keep one-way, keyed hashes of your phone number and of any verified email address linked to your account (through Google sign-in). They are deleted when the lock ends. <strong>If your account is deleted while it is locked</strong>, the hashes are kept with only: when the lock ends, and how many times this has happened. No name, no reports, no account ID.</p>
 <ul>
   <li>If you register again with the same number or email, the lock carries over.</li>
   <li>If an account with that number is again marked unreliable (by new contradicted reports) and deleted within the period, the next lock is longer. From the third time, an account registered with that number within the next 12 months stays locked until we review it.</li>
@@ -224,6 +227,9 @@
 <h3>מספר טלפון</h3>
 <p>נרשמים עם מספר טלפון. Google, באמצעות Firebase Authentication, שולחת לכם קוד ב-SMS. אנחנו משתמשים במספר כדי שלכל אדם יהיה חשבון אחד. משתמשים אחרים לעולם אינם רואים אותו.</p>
 
+<h3>התחברות עם Google (לבחירתכם)</h3>
+<p>אפשר גם לקשר את חשבון Google שלכם, כדי להתחבר שוב בנגיעה אחת במקום קוד SMS. מספר הטלפון עדיין נדרש. Firebase Authentication שומר אז גם את כתובת הדוא"ל, השם והקישור לתמונת הפרופיל של חשבון Google הזה. אנחנו משתמשים רק בדוא"ל, ורק כמתואר בסעיף "דיווחים כוזבים חוזרים" בהמשך; משתמשים אחרים לעולם אינם רואים דבר מזה. אפשר לבטל את הקישור בכל עת באפליקציה (הגדרות ← חשבון): ההתחברות עם Google נפסקת, והחשבון ממשיך לעבוד עם מספר הטלפון. השם והקישור לתמונה נמחקים אז. הדוא"ל נשאר עם החשבון עד שהוא נמחק, כי הוא שומר על חסימת הדיווחים הכוזבים. התחברות עם Google שלא קיבלה מספר טלפון נמחקת אחרי 30 יום ללא שימוש.</p>
+
 <h3>שם תצוגה</h3>
 <p>בעת ההרשמה אתם בוחרים שם תצוגה. כל מי שמשתמש באפליקציה, כולל אורחים, רואה אותו ליד הדיווחים הנוכחיים שלכם.</p>
 <p>אם הוגדרתם כבעלי תחנה או כעובדים בה, אנחנו שומרים את התפקיד ואת התחנות שהוא חל עליהן. הוא מוצג כתווית ליד הדיווחים שלכם, ומונע מכם לשפוט את התחנה שלכם או תחנות קרובות. הוא נמחק כשהחשבון שלכם נמחק.</p>
@@ -281,7 +287,7 @@
 
 <h2 id="he-liar-hash">דיווחים כוזבים חוזרים: מה נשמר אחרי מחיקה</h2>
 <p>אם כמה נהגים סותרים את הדיווחים שלכם, אתם חסומים לזמן מה מלסמן משאבות כעובדות. מחיקת החשבון, או הסרת המספר ממנו, והרשמה מחדש לא אמורות לסיים את החסימה מוקדם.</p>
-<p>לכן, <strong>רק כל עוד החשבון שלכם חסום</strong>, אנחנו שומרים גיבובים חד-כיווניים, המחושבים עם מפתח סודי, של מספר הטלפון שלכם ושל כל כתובת דוא"ל מאומתת המקושרת לחשבון (כיום האפליקציה מתחברת במספר טלפון בלבד). הם נמחקים כשהחסימה מסתיימת. <strong>אם החשבון נמחק בזמן שהוא חסום</strong>, הגיבובים נשמרים רק עם: מתי החסימה מסתיימת, וכמה פעמים זה קרה. בלי שם, בלי דיווחים, בלי מזהה חשבון.</p>
+<p>לכן, <strong>רק כל עוד החשבון שלכם חסום</strong>, אנחנו שומרים גיבובים חד-כיווניים, המחושבים עם מפתח סודי, של מספר הטלפון שלכם ושל כל כתובת דוא"ל מאומתת המקושרת לחשבון (דרך התחברות עם Google). הם נמחקים כשהחסימה מסתיימת. <strong>אם החשבון נמחק בזמן שהוא חסום</strong>, הגיבובים נשמרים רק עם: מתי החסימה מסתיימת, וכמה פעמים זה קרה. בלי שם, בלי דיווחים, בלי מזהה חשבון.</p>
 <ul>
   <li>אם תירשמו שוב עם אותו מספר או אותה כתובת דוא"ל, החסימה עוברת איתכם.</li>
   <li>אם חשבון עם המספר הזה מסומן שוב כלא אמין (בגלל דיווחים חדשים שנסתרו) ונמחק בתוך התקופה, החסימה הבאה ארוכה יותר. מהפעם השלישית, חשבון שנרשם עם המספר הזה ב-12 החודשים הבאים נשאר חסום עד שנבדוק אותו.</li>
