@@ -23,7 +23,7 @@ healthy-reminders/index.html  → https://israelcohen54.github.io/apps-privacy/h
 
 1. `mkdir <app-slug>` and copy an existing `index.html` as a starting point.
 2. **Rewrite the content for that app's real behaviour.** Do not copy claims across apps.
-   Zmanim Alarm states that its release build ships with no internet permission at all —
+   JZmanim (formerly Zmanim Alarm) states that its release build ships with no internet permission at all —
    that is true of *that* app (enforced by `test/assets/offline_invariants_test.dart` in its
    repo) and would be a false statement on a page for an app that does reach the network.
 3. Add a link on `index.html`.
