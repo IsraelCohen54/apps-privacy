@@ -57,23 +57,28 @@
 <main>
 
 <h1>Privacy Policy — Beholy</h1>
-<p class="meta">Effective 26 October 2026 · Applies to the Android app <strong>Beholy</strong> (<code>io.github.israelcohen54.beholy</code>)</p>
+<p class="meta">Effective 1 November 2026 · Applies to the Android app <strong>Beholy</strong> (<code>io.github.israelcohen54.beholy</code>)</p>
 
-<p class="lede"><strong>Beholy collects no personal data.</strong> It has no user accounts, no analytics, no advertising and no servers. What you write and mark stays on your phone: the released app is built without the internet permission, so it cannot send anything anywhere. The only copies made are your phone's own backups, if you use them (see <a href="#backup">Backup</a>).</p>
+<p class="lede"><strong>Beholy collects no personal data.</strong> It has no user accounts, no analytics, no advertising and no servers. What you write and mark stays on your phone: the released app is built without the internet permission, so it cannot send anything anywhere. The only exceptions are your phone's own backups, if you use them (see <a href="#backup">Backup</a>), and the optional one-time purchase, which Google Play handles (see <a href="#purchase">The garden's one-time unlock</a>).</p>
 
 <h2>What the app keeps on your device</h2>
 <p>To work, Beholy stores the following in its own private storage on your phone. None of it leaves the device through the app.</p>
 <ul>
   <li><strong>Your practices</strong> — what you write, and the details you choose for each one (which days, an optional time, how hard it is, its area).</li>
   <li><strong>Your marks</strong> — each time you mark a practice (or undo a mark), with its date and time; and the short note you write when you make up a missed day.</li>
-  <li><strong>Your settings</strong> — language, form of address, the app's look and its theme.</li>
+  <li><strong>Your settings</strong> — language, form of address, the app's look and its theme; whether the garden is on, and your bedtime.</li>
+  <li><strong>The garden's nights</strong> — for each night it watched, whether the phone stayed locked until morning, or the time it was first opened.</li>
+  <li><strong>The garden's purchase record</strong>, if you buy the unlock — the signed record Google Play gives the app (see below).</li>
   <li><strong>Which achievement medals you have already been shown</strong>, so the same one is not announced twice.</li>
   <li><strong>Your phone's time-zone changes</strong>, so a flight across time zones is not mistaken for a missed day.</li>
 </ul>
-<p>Your light, levels, streaks, achievements and personal bests are not stored as such; they are worked out on the phone from your marks each time.</p>
+<p>Your light, levels, streaks, achievements, personal bests and the garden's tree are not stored as such; they are worked out on the phone from your marks and nights each time.</p>
 
 <h3>Shabbat and holiday times</h3>
-<p>The app calculates Shabbat and Yom Tov times on the device, from a calendar built into the app and your phone's time zone (when your phone is on Israel time, it uses Jerusalem's times). It does not ask for, read or use your location.</p>
+<p>The app calculates Shabbat and Yom Tov times on the device, from a calendar built into the app and the city you choose (or, when none is chosen, your phone's time zone: on Israel time, Jerusalem's times). The garden draws day and night from the same city or time zone. The app does not ask for, read or use your location.</p>
+
+<h3>The garden</h3>
+<p>If you turn on the garden, a tree grows on the nights you leave the phone alone. Every night, from the bedtime you choose and for eight hours, the app notes on the phone whether the phone is unlocked. To leave calls out, it checks only whether a call is in progress, from the phone's audio state; it does not read who is calling, phone numbers or call history. At bedtime the garden opens over the lock screen. Nothing about your nights leaves the phone.</p>
 
 <h3>Home-screen widget</h3>
 <p>If you add Beholy's widget to your home screen, it shows today's practices there (their titles, how many are kept, and your streak's day) and lets you mark them. Anyone who can see your home screen can see them. The widget reads its contents from the app's private storage on the phone, where the app also notes your phone's language for it.</p>
@@ -81,12 +86,28 @@
 <h2>What the app collects: nothing</h2>
 <p>There is no sign-in, no usage tracking, no crash reporting, no advertising identifier and no third-party SDK that gathers data. Nothing is sent to us or to anyone else. On Android this is enforced by the operating system: <strong>the released app is built without the internet permission</strong>, so it cannot open a network connection.</p>
 
+<h2 id="purchase">The garden's one-time unlock (Google Play)</h2>
+<p>The garden's first 40 watched nights are free. After them it can be unlocked with a one-time purchase ("support the developer"). The purchase is made entirely through Google Play, on the phone, by the Google Play Store app:</p>
+<ul>
+  <li><strong>Google handles the payment.</strong> Your card, name, email address and billing details go to Google, under <a href="https://policies.google.com/privacy">Google's privacy policy</a> and the Google Play terms. The app never sees them.</li>
+  <li><strong>What the app keeps:</strong> the purchase record Google Play signs and gives it (the product, the order number, the time of purchase and a purchase token), so that the unlock can be checked on the phone without a connection. It is kept in the app's private storage and never sent anywhere by the app.</li>
+  <li><strong>Each time the app opens</strong> it asks Google Play, on the phone, whether the purchase is still owned, so that a refund is honoured and a new phone gets the unlock back.</li>
+  <li><strong>What we can see:</strong> as the seller, we see the order records Google Play Console shows developers (such as order number, date, product, price and country). We use them only to handle refunds and for accounting, and cannot link them to anything in the app, which sends us nothing.</li>
+</ul>
+
 <h2>Permissions, and why each one is there</h2>
-<p>None of these transmit data.</p>
+<p>None of these transmit data. Those marked optional are asked for only if you want them.</p>
 <div class="wrap">
 <table>
   <tr><th>Permission</th><th>Why</th></tr>
-  <tr><td>Run at startup</td><td>Keep the home-screen widget up to date after the phone restarts, and turn it over to the new day on time.</td></tr>
+  <tr><td>Notifications</td><td>The garden's bedtime call, and a quiet note while it watches the night.</td></tr>
+  <tr><td>Alarms &amp; reminders</td><td>Begin each night exactly at your bedtime, even with the app closed.</td></tr>
+  <tr><td>Full-screen notifications</td><td>Open the garden over the lock screen at bedtime.</td></tr>
+  <tr><td>Foreground service (special use)</td><td>The night's watch: for eight hours from bedtime, note whether the phone is unlocked.</td></tr>
+  <tr><td>Display over other apps (optional)</td><td>Let the garden open by itself at bedtime, and come back when the screen goes off.</td></tr>
+  <tr><td>Device admin: lock the screen (optional)</td><td>Lock the phone after the bedtime watering. It can do nothing else. Turn it off before uninstalling the app.</td></tr>
+  <tr><td>Google Play billing</td><td>The garden's one-time unlock, through Google Play.</td></tr>
+  <tr><td>Run at startup</td><td>Keep the widget up to date and the garden's bedtime set after the phone restarts.</td></tr>
   <tr><td>Wake lock &amp; foreground service</td><td>Added by Android's background-work library, so a mark made from the widget is finished and saved even when the app is closed.</td></tr>
   <tr><td>View network state</td><td>Added by the same library. It can only tell whether the phone is connected; without the internet permission the app cannot connect.</td></tr>
 </table>
@@ -96,13 +117,13 @@
 <p>If backup is turned on in your phone's own settings, Android may include Beholy's data in your device backup to your Google account, so it can be restored on a new phone. Setting up a new phone directly from this one may copy it too. Those copies are made and kept by Android and Google under Google's privacy policy; we have no access to them. You can turn backup off in your phone's settings.</p>
 
 <h2>Deleting your data</h2>
-<p>Uninstalling the app, or clearing its storage in your phone's settings, deletes everything it kept on the device. A Google backup made earlier stays until you delete it in your Google account.</p>
+<p>Uninstalling the app, or clearing its storage in your phone's settings, deletes everything it kept on the device. A Google backup made earlier stays until you delete it in your Google account. A purchase stays with your Google account (Google Play keeps its record), so reinstalling restores the unlock.</p>
 
 <h2>Children</h2>
 <p>The app is not directed at children and collects no data from anyone, of any age.</p>
 
 <h2>Changes to this policy</h2>
-<p>If the app changes in a way that affects this policy, this page will be updated and the effective date above will change. Any new permission (for example notifications for reminders, or your location for Shabbat times) and any way for data to leave the phone would be described here first.</p>
+<p>If the app changes in a way that affects this policy, this page will be updated and the effective date above will change. Any new permission (for example your location for Shabbat times) and any new way for data to leave the phone would be described here first.</p>
 
 <h2>Contact</h2>
 <p>Questions about this policy or about the app: <a href="mailto:IsraelCohen54@gmail.com">IsraelCohen54@gmail.com</a></p>
@@ -111,40 +132,64 @@
 
 <section dir="rtl" lang="he">
 <h2>מדיניות פרטיות — Beholy</h2>
-<p class="meta">בתוקף מ-26 באוקטובר 2026</p>
+<p class="meta">בתוקף מ-1 בנובמבר 2026</p>
 
-<p class="lede"><strong>Beholy אינה אוספת נתונים אישיים.</strong> אין בה חשבונות משתמש, אין מעקב שימוש, אין פרסומות ואין שרתים. מה שנכתב ומסומן בה נשאר בטלפון: הגרסה המופצת נבנית ללא הרשאת אינטרנט, ולכן אין באפשרותה לשלוח דבר לשום מקום. העותקים היחידים הם הגיבויים של הטלפון עצמו, אם משתמשים בהם (ראו "גיבוי" למטה).</p>
+<p class="lede"><strong>Beholy אינה אוספת נתונים אישיים.</strong> אין בה חשבונות משתמש, אין מעקב שימוש, אין פרסומות ואין שרתים. מה שנכתב ומסומן בה נשאר בטלפון: הגרסה המופצת נבנית ללא הרשאת אינטרנט, ולכן אין באפשרותה לשלוח דבר לשום מקום. היוצאים מן הכלל היחידים הם הגיבויים של הטלפון עצמו, אם משתמשים בהם (ראו "גיבוי" למטה), והרכישה החד-פעמית, שאינה חובה, שמתבצעת דרך Google Play (ראו "פתיחת הגן ברכישה חד-פעמית").</p>
 
 <h3>מה נשמר במכשיר</h3>
 <p>כדי לפעול, האפליקציה שומרת באחסון הפרטי שלה בטלפון:</p>
 <ul>
   <li><strong>ההנהגות</strong> — מה שנכתב, והפרטים שנבחרו לכל אחת (באילו ימים, שעה אם נקבעה, רמת הקושי, התחום).</li>
   <li><strong>הסימונים</strong> — כל סימון של הנהגה (או ביטולו), עם התאריך והשעה; וההערה הקצרה שנכתבת בהשלמת יום שהוחמץ.</li>
-  <li><strong>ההגדרות</strong> — שפה, צורת פנייה, המראה וערכת הנושא.</li>
+  <li><strong>ההגדרות</strong> — שפה, צורת פנייה, המראה וערכת הנושא; האם הגן פועל, ושעת השינה.</li>
+  <li><strong>הלילות של הגן</strong> — לכל לילה שנצפה: האם הטלפון נשאר נעול עד הבוקר, או מתי נפתח לראשונה.</li>
+  <li><strong>רשומת הרכישה של הגן</strong>, אם רוכשים — הרשומה החתומה ש-Google Play מוסרת לאפליקציה (ראו למטה).</li>
   <li><strong>אילו הישגים כבר הוצגו</strong>, כדי שאותו הישג לא יוכרז פעמיים.</li>
   <li><strong>שינויי אזור הזמן של הטלפון</strong>, כדי שטיסה בין אזורי זמן לא תיחשב ליום שהוחמץ.</li>
 </ul>
-<p>האור, הדרגות, הרצפים, ההישגים והשיאים אינם נשמרים כשלעצמם; הם מחושבים בטלפון מתוך הסימונים בכל פעם מחדש.</p>
-<p>זמני השבת והחג מחושבים במכשיר, לפי לוח השנה המובנה באפליקציה ואזור הזמן של הטלפון (כשהטלפון מכוון לשעון ישראל, לפי זמני ירושלים). האפליקציה אינה מבקשת, קוראת או משתמשת במיקום.</p>
+<p>האור, הדרגות, הרצפים, ההישגים, השיאים והעץ של הגן אינם נשמרים כשלעצמם; הם מחושבים בטלפון מתוך הסימונים והלילות בכל פעם מחדש.</p>
+<p>זמני השבת והחג מחושבים במכשיר, לפי לוח השנה המובנה באפליקציה והעיר שנבחרה (וכשלא נבחרה, לפי אזור הזמן של הטלפון: בשעון ישראל, לפי זמני ירושלים). הגן מצייר יום ולילה לפי אותה עיר או אזור זמן. האפליקציה אינה מבקשת, קוראת או משתמשת במיקום.</p>
+<p>אם מפעילים את הגן, עץ גדל בלילות שבהם הטלפון לא נפתח. בכל לילה, משעת השינה שנבחרה ולמשך שמונה שעות, האפליקציה רושמת בטלפון אם הטלפון נפתח. כדי ששיחות לא ייחשבו, היא בודקת רק אם מתקיימת שיחה, לפי מצב השמע של הטלפון; היא אינה קוראת מי מתקשר, מספרי טלפון או היסטוריית שיחות. בשעת השינה הגן נפתח מעל מסך הנעילה. דבר מהלילות אינו יוצא מהטלפון.</p>
 <p>אם מוסיפים את הווידג'ט של Beholy למסך הבית, הוא מציג שם את ההנהגות של היום (שמותיהן, כמה סומנו, והיום ברצף) ומאפשר לסמן אותן. כל מי שרואה את מסך הבית רואה גם אותם. הווידג'ט קורא את תוכנו מהאחסון הפרטי של האפליקציה, ושם היא גם רושמת עבורו את שפת הטלפון.</p>
 
 <h3>מה נאסף: כלום</h3>
 <p>אין התחברות, אין מעקב שימוש, אין דיווח קריסות, אין מזהי פרסום ואין ערכות פיתוח של צד שלישי האוספות מידע. באנדרואיד הדבר נאכף ברמת מערכת ההפעלה: <strong>הגרסה המופצת נבנית ללא הרשאת אינטרנט</strong>, ולכן אין באפשרותה לפתוח חיבור לרשת.</p>
 
+<h3>פתיחת הגן ברכישה חד-פעמית (Google Play)</h3>
+<p>40 הלילות הראשונים שהגן צופה בהם הם בחינם. אחריהם אפשר לפתוח אותו ברכישה חד-פעמית ("תמיכה במפתח"). הרכישה מתבצעת כולה דרך Google Play, בטלפון, באפליקציית חנות Google Play:</p>
+<ul>
+  <li><strong>Google מטפלת בתשלום.</strong> פרטי הכרטיס, השם, כתובת הדוא"ל ופרטי החיוב נמסרים ל-Google, לפי <a href="https://policies.google.com/privacy">מדיניות הפרטיות של Google</a> ותנאי Google Play. האפליקציה אינה רואה אותם.</li>
+  <li><strong>מה האפליקציה שומרת:</strong> את רשומת הרכישה ש-Google Play חותמת ומוסרת לה (המוצר, מספר ההזמנה, מועד הרכישה ואסימון רכישה), כדי לבדוק את הפתיחה בטלפון גם בלי חיבור. היא נשמרת באחסון הפרטי של האפליקציה ואינה נשלחת על ידה לשום מקום.</li>
+  <li><strong>בכל פתיחה</strong> האפליקציה שואלת את Google Play, בטלפון, אם הרכישה עדיין בבעלותך, כדי שהחזר כספי יכובד ושטלפון חדש יקבל את הפתיחה בחזרה.</li>
+  <li><strong>מה אנחנו רואים:</strong> כמוכרים, אנו רואים את רשומות ההזמנות ש-Google Play Console מציגה למפתחים (כגון מספר הזמנה, תאריך, מוצר, מחיר ומדינה). אנו משתמשים בהן רק לטיפול בהחזרים ולהנהלת חשבונות, ואין באפשרותנו לקשר אותן לדבר באפליקציה, שאינה שולחת לנו דבר.</li>
+</ul>
+
 <h3>הרשאות</h3>
-<p>ההרשאות הנדרשות: הפעלה לאחר הדלקת הטלפון (כדי שהווידג'ט יתעדכן ויעבור ליום החדש בזמן), נעילת השכמה ושירות חזית (נוספות על ידי ספריית העבודה ברקע של אנדרואיד, כדי שסימון מהווידג'ט יישמר גם כשהאפליקציה סגורה), וצפייה במצב הרשת (נוספת על ידי אותה ספרייה; היא רק יודעת אם הטלפון מחובר, ובלי הרשאת אינטרנט אין באפשרות האפליקציה להתחבר). אף אחת מהן אינה מעבירה מידע.</p>
+<p>אף אחת מההרשאות אינה מעבירה מידע. הרשאות הגן שמסומנות "רשות" מתבקשות רק אם רוצים בהן.</p>
+<ul>
+  <li><strong>התראות</strong> — הקריאה של הגן בשעת השינה, והודעה שקטה בזמן שהוא צופה בלילה.</li>
+  <li><strong>שעונים מעוררים ותזכורות</strong> — כדי שכל לילה יתחיל בדיוק בשעת השינה, גם כשהאפליקציה סגורה.</li>
+  <li><strong>התראות במסך מלא</strong> — פתיחת הגן מעל מסך הנעילה בשעת השינה.</li>
+  <li><strong>שירות חזית (שימוש מיוחד)</strong> — הצפייה בלילה: במשך שמונה שעות משעת השינה, רישום אם הטלפון נפתח.</li>
+  <li><strong>הצגה מעל אפליקציות אחרות (רשות)</strong> — כדי שהגן ייפתח מעצמו בשעת השינה, ויחזור כשהמסך נכבה.</li>
+  <li><strong>מנהל מכשיר: נעילת המסך (רשות)</strong> — נעילת הטלפון אחרי ההשקיה בשעת השינה. אין לה יכולת אחרת. יש לכבות אותה לפני הסרת האפליקציה.</li>
+  <li><strong>חיוב דרך Google Play</strong> — פתיחת הגן ברכישה חד-פעמית.</li>
+  <li><strong>הפעלה לאחר הדלקת הטלפון</strong> — כדי שהווידג'ט יתעדכן ושעת השינה של הגן תישאר מכוונת אחרי הפעלה מחדש.</li>
+  <li><strong>נעילת השכמה ושירות חזית</strong> — נוספות על ידי ספריית העבודה ברקע של אנדרואיד, כדי שסימון מהווידג'ט יישמר גם כשהאפליקציה סגורה.</li>
+  <li><strong>צפייה במצב הרשת</strong> — נוספת על ידי אותה ספרייה; היא רק יודעת אם הטלפון מחובר, ובלי הרשאת אינטרנט אין באפשרות האפליקציה להתחבר.</li>
+</ul>
 
 <h3>גיבוי</h3>
 <p>אם הגיבוי מופעל בהגדרות הטלפון, אנדרואיד עשוי לכלול את נתוני האפליקציה בגיבוי המכשיר לחשבון Google, כדי לשחזר אותם בטלפון חדש. גם הגדרת טלפון חדש ישירות מהטלפון הזה עשויה להעתיק אותם. העותקים האלה נעשים ונשמרים על ידי אנדרואיד ו-Google לפי מדיניות הפרטיות של Google, ואין לנו גישה אליהם. אפשר לכבות את הגיבוי בהגדרות הטלפון.</p>
 
 <h3>מחיקה</h3>
-<p>הסרת האפליקציה, או ניקוי האחסון שלה בהגדרות הטלפון, מוחקים את כל מה שנשמר במכשיר. גיבוי ב-Google שנעשה קודם לכן נשאר עד שמוחקים אותו בחשבון Google.</p>
+<p>הסרת האפליקציה, או ניקוי האחסון שלה בהגדרות הטלפון, מוחקים את כל מה שנשמר במכשיר. גיבוי ב-Google שנעשה קודם לכן נשאר עד שמוחקים אותו בחשבון Google. רכישה נשארת בחשבון Google (‏Google Play שומרת את רשומתה), ולכן התקנה מחדש מחזירה את הפתיחה.</p>
 
 <h3>ילדים</h3>
 <p>האפליקציה אינה מיועדת לילדים, ואינה אוספת נתונים מאיש, בשום גיל.</p>
 
 <h3>שינויים במדיניות</h3>
-<p>אם האפליקציה תשתנה באופן שנוגע למדיניות זו, הדף הזה יעודכן ותאריך התוקף ישתנה. כל הרשאה חדשה (למשל התראות לתזכורות, או מיקום לזמני השבת) וכל דרך שבה נתונים יוצאים מהטלפון יתוארו כאן מראש.</p>
+<p>אם האפליקציה תשתנה באופן שנוגע למדיניות זו, הדף הזה יעודכן ותאריך התוקף ישתנה. כל הרשאה חדשה (למשל מיקום לזמני השבת) וכל דרך חדשה שבה נתונים יוצאים מהטלפון יתוארו כאן מראש.</p>
 
 <h3>יצירת קשר</h3>
 <p>לשאלות בנוגע למדיניות זו או לאפליקציה: <a href="mailto:IsraelCohen54@gmail.com">IsraelCohen54@gmail.com</a></p>
