@@ -17,6 +17,7 @@ index.html                    → landing page (lists the apps)
 zmanim-alarm/index.html       → https://israelcohen54.github.io/apps-privacy/zmanim-alarm/
 beholy/index.html             → https://israelcohen54.github.io/apps-privacy/beholy/
 healthy-reminders/index.html  → https://israelcohen54.github.io/apps-privacy/healthy-reminders/
+neatchat-keeper/index.html    → https://israelcohen54.github.io/apps-privacy/neatchat-keeper/
 ```
 
 ## Adding an app

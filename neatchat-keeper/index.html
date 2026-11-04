@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NeatChat Keeper — Privacy Policy</title>
+<meta name="description" content="Privacy policy of NeatChat Keeper (@NeatChatKeeperBot), a Telegram bot that removes repeated posts in groups.">
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1a1c1e; --muted: #5a5f66;
+    --rule: #e2e5e9; --accent: #2c5f8a; --card: #f5f7f9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14171a; --fg: #e6e8eb; --muted: #a0a6ad;
+      --rule: #2a2f35; --accent: #7fb3d9; --card: #1c2025;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 3rem 1.25rem 4rem;
+    background: var(--bg); color: var(--fg);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  main { max-width: 44rem; margin: 0 auto; }
+  h1 { font-size: 1.6rem; margin: 0 0 .35rem; }
+  h2 { font-size: 1.1rem; margin: 2rem 0 .5rem; }
+  .meta { color: var(--muted); margin: 0 0 1.5rem; }
+  nav { margin: 0 0 1.5rem; }
+  nav a { color: var(--accent); margin-inline-end: 1rem; font-weight: 600; text-decoration: none; }
+  section { border-top: 1px solid var(--rule); padding-top: 1.5rem; margin-top: 2.5rem; }
+  .summary { background: var(--card); border: 1px solid var(--rule); border-radius: 8px; padding: .9rem 1.1rem; }
+  .summary ul { margin: .3rem 0 0; }
+  ul { padding-inline-start: 1.25rem; }
+  li { margin: .25rem 0; }
+  table { width: 100%; border-collapse: collapse; font-size: .92rem; margin: .5rem 0; }
+  th, td { border: 1px solid var(--rule); padding: .45rem .55rem; vertical-align: top; text-align: start; }
+  th { background: var(--card); }
+  .wrap { overflow-x: auto; }
+  a { color: var(--accent); }
+  code { font-size: .92em; }
+  footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .88rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>NeatChat Keeper — Privacy Policy</h1>
+  <p class="meta">Telegram bot <a href="https://t.me/NeatChatKeeperBot">@NeatChatKeeperBot</a> · Version 1.0 · Effective: November 4, 2026</p>
+  <nav><a href="#en">English</a><a lang="he" href="#he">עברית</a><a lang="ru" href="#ru">Русский</a><a href="./terms/">Terms</a><a href="./about/">About</a></nav>
+
+  <!-- ============================== ENGLISH ============================== -->
+  <section id="en" lang="en" dir="ltr">
+    <div class="summary">
+      <strong>In short</strong>
+      <ul>
+        <li>The bot reads messages in groups whose admins added it, to remove repeated posts and apply the group's rules.</li>
+        <li>It keeps one-way fingerprints (hashes) and IDs. It never stores message text, photos, names, usernames or phone numbers.</li>
+        <li>Most data is deleted within 30 days. Send <code>/forgetme</code> to delete what is linked to you.</li>
+        <li>No ads, no analytics, no AI training, no sale of data.</li>
+      </ul>
+    </div>
+
+    <h2>1. Who is responsible</h2>
+    <p>NeatChat Keeper is operated by Israel Cohen, an individual developer (the "controller"). Contact: <a href="mailto:hartk11@gmail.com">hartk11@gmail.com</a>. No data protection officer is appointed, because the law does not require one for a service of this size.</p>
+
+    <h2>2. How the bot works, and who decides</h2>
+    <p>A group admin adds the bot and chooses its rules: how long a post counts as a repeat, whether to limit posts per person, which links are allowed, and whether removed messages are logged. The bot acts on those settings. Admins who use the bot should let their members know that the group is moderated by it.</p>
+
+    <h2>3. What we process, why, and for how long</h2>
+    <div class="wrap"><table>
+      <tr><th>Data</th><th>Purpose</th><th>Legal basis</th><th>Kept for</th></tr>
+      <tr><td>Messages in the group, as delivered by Telegram</td><td>Computing fingerprints and checking the group's rules</td><td>Legitimate interest: keeping the group clean, as its admin asked</td><td>Not stored. Processed in memory only</td></tr>
+      <tr><td>Fingerprints: SHA-256 hashes of normalized text and links; Telegram file IDs of photos and files; with group ID, sender's user ID, message ID and time</td><td>Recognizing repeated posts</td><td>Legitimate interest (as above)</td><td>The group's repeat window (deleted every few hours), at most 30 days</td></tr>
+      <tr><td>Post-limit records: group ID, user ID, message ID, time; for photo albums, the album ID and whether it was over the limit</td><td>Applying a "posts per 24 hours" limit</td><td>Legitimate interest (as above)</td><td>About 24 hours</td></tr>
+      <tr><td>Removal records: group ID, message ID, time</td><td>Handling each removal once, even if Telegram sends the same message twice</td><td>Legitimate interest (as above)</td><td>2 days</td></tr>
+      <tr><td>Album records: group ID, album ID, the album's first message ID, a hash of the album's caption, time</td><td>Judging a photo album as one post (its caption sits on one photo only); recognizing the same album sent again; one notice per album</td><td>Legitimate interest (as above)</td><td>2 days</td></tr>
+      <tr><td>Log rate: group ID, time (minute), number of removals in that minute, the ID of the summary message in the log admin's chat</td><td>Keeping the admin log short during a flood (a summary instead of many copies)</td><td>Legitimate interest (as above)</td><td>A few hours</td></tr>
+      <tr><td>Group data: settings, allowed sites and invite links, member count, the ID of the group's linked channel; user IDs and app languages of the person who added the bot and of admins who turned on the log, started a test or receive the weekly report; user IDs of admins who made it an admin, changed its rights or used admin commands</td><td>Running the bot for the group, admin menus, weekly reports</td><td>Performance of the service the admin requested</td><td>While the bot is in the group; deleted 90 days after it is removed, or about 9 months after the group's last message</td></tr>
+      <tr><td>Admin checks: whether a user (an admin or a member) is an admin of a group</td><td>Allowing admin commands only to admins, and exempting admins from the group's rules</td><td>Legitimate interest (security)</td><td>About 1 day</td></tr>
+      <tr><td>Counts: removals per group per day; the bot's total daily usage</td><td>Reports to admins; keeping the service within its limits</td><td>Legitimate interest</td><td>40 days (per group); 90 days (usage)</td></tr>
+      <tr><td>Exit survey: how many admins chose each answer</td><td>Improving the bot</td><td>Not personal data (no IDs are stored)</td><td>Indefinitely</td></tr>
+      <tr><td>If paid features are offered: transaction ID, item, date, payer's user ID, group ID</td><td>Providing the purchase, refunds, accounting</td><td>Contract; legal obligation (tax records)</td><td>As tax law requires (up to 7 years)</td></tr>
+    </table></div>
+    <p>Fingerprints can't be turned back into the message, but because they are stored with user IDs we treat them as personal data and protect them as such.</p>
+    <p><strong>Admin log.</strong> If a group admin turns on the log (<code>/log</code>), each removed message (in test mode: each message that would have been removed) is copied into that admin's private Telegram chat with the bot. These copies live in Telegram, not in our database; the admin can delete them there.</p>
+    <p><strong>Providing data is voluntary.</strong> No law requires you to give us data. If you object, the bot cannot moderate your messages in that group, and an admin may choose another tool.</p>
+
+    <h2>4. What we never do</h2>
+    <ul>
+      <li>Store message text, photos, names, usernames, phone numbers or contacts.</li>
+      <li>Use data for advertising, analytics services, profiling or training AI.</li>
+      <li>Sell or rent data, or combine it across bots.</li>
+      <li>Make decisions with legal effects about you. Removals follow the group admin's rules, and if the admin log (/log) is on, admins can restore removed posts.</li>
+    </ul>
+
+    <h2>5. Who else handles the data</h2>
+    <ul>
+      <li><strong>Telegram</strong> delivers all messages to the bot; its own <a href="https://telegram.org/privacy">privacy policy</a> applies to the platform.</li>
+      <li><strong>Cloudflare, Inc.</strong> (USA) hosts the bot and its database (Cloudflare Workers and D1), as our processor under its data processing addendum. The database's primary location is in Europe. Transfers rely on the EU Standard Contractual Clauses and the EU-US Data Privacy Framework, as applicable.</li>
+      <li>Authorities, only if the law requires it.</li>
+    </ul>
+
+    <h2>6. Security</h2>
+    <p>Data travels over encrypted connections (TLS) and is encrypted at rest by our host. Only Telegram can call the bot (a secret token protects the connection). Access to the systems is limited to the operator. We keep as little data as possible. If a security incident puts your data at risk, we will notify the authorities and you as the law requires.</p>
+
+    <h2>7. Your rights</h2>
+    <p>Depending on where you live, you can ask for access to your data, a copy, correction, deletion, restriction, or to object to processing, and you can withdraw consent where we rely on it.</p>
+    <ul>
+      <li><strong>Delete now:</strong> send <code>/forgetme</code> to the bot (private chat or group). Records linked to your user ID are deleted immediately, except fingerprints of your recent posts and post-limit records: these stay until they expire (at most 30 days and 24 hours), so the deletion can't be used to repost the same ad or reset a limit.</li>
+      <li><strong>Anything else:</strong> email <a href="mailto:hartk11@gmail.com">hartk11@gmail.com</a>. We store no names, usernames or contact details, so we can't confirm who sent an email. This is why requests linked to your Telegram account go through the bot, where Telegram confirms it is you: <code>/mydata</code> shows what kinds of data are stored about you, with counts, and <code>/forgetme</code> (above) deletes it. For other requests, write to us; we will explain what we hold and how it can be handled, but we won't give out data linked to a Telegram ID based on an email alone. It is free, and we answer within 30 days.</li>
+      <li><strong>What deletion can't reach:</strong> copies in admins' Telegram chats (the admin can delete them), anonymous counts, and records the law requires us to keep.</li>
+      <li><strong>Complaints:</strong> you may complain to your data protection authority, for example Israel's Privacy Protection Authority, your EU supervisory authority, the UK ICO, or Brazil's ANPD. We'd appreciate the chance to fix the issue first.</li>
+    </ul>
+
+    <h2>8. Children</h2>
+    <p>The bot is not intended for anyone under 16, or under 18 where Telegram's terms require it. We don't collect age information. If you believe a child's data is stored, the child (or a parent, from the child's Telegram account) can send <code>/forgetme</code> to the bot; or email us and we will explain the options.</p>
+
+    <h2>9. Where the service is offered</h2>
+    <p>The service is not offered to residents of countries under Israeli or international sanctions, as set out in the <a href="./terms/">Terms</a>.</p>
+
+    <h2>10. Changes and languages</h2>
+    <p>If this policy changes, the version and date above change, and important changes are announced on this page and, where possible, in the bot's profile. This policy is published in English, Hebrew and Russian; if they differ, the English version applies.</p>
+
+    <h2>11. Contact</h2>
+    <p>Israel Cohen · <a href="mailto:hartk11@gmail.com">hartk11@gmail.com</a></p>
+  </section>
+
+  <!-- ============================== HEBREW ============================== -->
+  <section id="he" lang="he" dir="rtl">
+    <div class="summary">
+      <strong>בקצרה</strong>
+      <ul>
+        <li>הבוט קורא הודעות בקבוצות שמנהליהן הוסיפו אותו, כדי למחוק פרסומים חוזרים ולהפעיל את כללי הקבוצה.</li>
+        <li>הוא שומר טביעות חד-כיווניות (גיבוב) ומזהים. הוא לעולם לא שומר את תוכן ההודעות, תמונות, שמות, שמות משתמש או מספרי טלפון.</li>
+        <li>רוב המידע נמחק תוך 30 יום. שלחו <code>/forgetme</code> כדי למחוק את מה שקשור אליכם.</li>
+        <li>בלי פרסומות, בלי כלי אנליטיקה, בלי אימון בינה מלאכותית, בלי מכירת מידע.</li>
+      </ul>
+    </div>
+
+    <h2>1. מי אחראי</h2>
+    <p>NeatChat Keeper מופעל על ידי ישראל כהן, מפתח פרטי (בעל השליטה במאגר). יצירת קשר: <a href="mailto:hartk11@gmail.com">hartk11@gmail.com</a>. לא מונה ממונה על הגנת הפרטיות, כי החוק אינו מחייב זאת בשירות בהיקף כזה.</p>
+
+    <h2>2. איך הבוט עובד, ומי מחליט</h2>
+    <p>מנהל בקבוצה מוסיף את הבוט ובוחר את הכללים: כמה זמן פרסום נחשב חוזר, האם להגביל פרסומים לאדם, אילו קישורים מותרים, והאם לתעד הודעות שנמחקו. הבוט פועל לפי ההגדרות האלה. מנהלים שמשתמשים בבוט צריכים ליידע את חברי הקבוצה שהקבוצה מנוהלת באמצעותו.</p>
+
+    <h2>3. מה אנחנו מעבדים, למה ולכמה זמן</h2>
+    <div class="wrap"><table>
+      <tr><th>מידע</th><th>מטרה</th><th>בסיס חוקי</th><th>משך שמירה</th></tr>
+      <tr><td>הודעות בקבוצה, כפי שטלגרם מעבירה אותן</td><td>חישוב טביעות ובדיקת כללי הקבוצה</td><td>אינטרס לגיטימי: שמירה על קבוצה נקייה, לבקשת המנהל</td><td>לא נשמרות. מעובדות בזיכרון בלבד</td></tr>
+      <tr><td>טביעות: גיבוב SHA-256 של טקסט וקישורים מנורמלים; מזהי קבצים של טלגרם עבור תמונות וקבצים; יחד עם מזהה הקבוצה, מזהה המשתמש של השולח, מזהה ההודעה והזמן</td><td>זיהוי פרסומים חוזרים</td><td>אינטרס לגיטימי (כנ"ל)</td><td>לפי חלון הכפילויות של הקבוצה (נמחקות כל כמה שעות), עד 30 יום</td></tr>
+      <tr><td>רישומי מגבלת פרסומים: מזהה קבוצה, מזהה משתמש, מזהה הודעה, זמן; באלבומי תמונות, מזהה האלבום והאם חרג מהמגבלה</td><td>הפעלת מגבלת "פרסומים ל-24 שעות"</td><td>אינטרס לגיטימי (כנ"ל)</td><td>כ-24 שעות</td></tr>
+      <tr><td>רישומי מחיקה: מזהה קבוצה, מזהה הודעה, זמן</td><td>טיפול בכל מחיקה פעם אחת, גם אם טלגרם שולחת את אותה הודעה פעמיים</td><td>אינטרס לגיטימי (כנ"ל)</td><td>יומיים</td></tr>
+      <tr><td>רישומי אלבומים: מזהה קבוצה, מזהה אלבום, מזהה ההודעה הראשונה באלבום, גיבוב של כיתוב האלבום, זמן</td><td>טיפול באלבום תמונות כפרסום אחד (הכיתוב מופיע על תמונה אחת בלבד); זיהוי אותו אלבום שנשלח שוב; הודעה אחת לכל אלבום</td><td>אינטרס לגיטימי (כנ"ל)</td><td>יומיים</td></tr>
+      <tr><td>קצב יומן: מזהה קבוצה, זמן (דקה), מספר המחיקות באותה דקה, מזהה הודעת הסיכום בצ'אט של מנהל היומן</td><td>שמירה על יומן מנהל קצר בזמן הצפה (סיכום במקום עותקים רבים)</td><td>אינטרס לגיטימי (כנ"ל)</td><td>כמה שעות</td></tr>
+      <tr><td>מידע על הקבוצה: הגדרות, אתרים וקישורי הזמנה מאושרים, מספר חברים, מזהה הערוץ המקושר לקבוצה; מזהי משתמש ושפות אפליקציה של מי שהוסיף את הבוט ושל מנהלים שהפעילו את היומן, התחילו ניסיון או מקבלים את הדוח השבועי; מזהי משתמש של מנהלים שהפכו אותו למנהל, שינו את הרשאותיו או השתמשו בפקודות מנהל</td><td>הפעלת הבוט בקבוצה, תפריטי מנהל, דוחות שבועיים</td><td>מתן השירות שהמנהל ביקש</td><td>כל עוד הבוט בקבוצה; נמחק 90 יום אחרי שהוציאו אותו, או כ-9 חודשים אחרי ההודעה האחרונה בקבוצה</td></tr>
+      <tr><td>בדיקות מנהל: האם משתמש (מנהל או חבר) הוא מנהל בקבוצה</td><td>לאפשר פקודות מנהל רק למנהלים, ולפטור מנהלים מכללי הקבוצה</td><td>אינטרס לגיטימי (אבטחה)</td><td>כיום אחד</td></tr>
+      <tr><td>ספירות: מחיקות לכל קבוצה ביום; השימוש היומי הכולל בבוט</td><td>דוחות למנהלים; שמירה על השירות בתוך מגבלותיו</td><td>אינטרס לגיטימי</td><td>40 יום (לכל קבוצה); 90 יום (שימוש)</td></tr>
+      <tr><td>סקר עזיבה: כמה מנהלים בחרו כל תשובה</td><td>שיפור הבוט</td><td>אינו מידע אישי (לא נשמרים מזהים)</td><td>ללא הגבלה</td></tr>
+      <tr><td>אם יוצעו תכונות בתשלום: מזהה עסקה, פריט, תאריך, מזהה המשתמש המשלם, מזהה הקבוצה</td><td>מתן הרכישה, החזרים, הנהלת חשבונות</td><td>חוזה; חובה חוקית (רישומי מס)</td><td>כפי שדיני המס מחייבים (עד 7 שנים)</td></tr>
+    </table></div>
+    <p>אי אפשר לשחזר הודעה מטביעה, אבל מכיוון שהטביעות נשמרות יחד עם מזהי משתמש, אנחנו מתייחסים אליהן כמידע אישי ומגנים עליהן בהתאם.</p>
+    <p><strong>יומן מנהלים.</strong> אם מנהל בקבוצה מפעיל את היומן (<code>/log</code>), כל הודעה שנמחקה (במצב ניסיון: כל הודעה שהייתה נמחקת) מועתקת לצ'אט הפרטי של אותו מנהל עם הבוט בטלגרם. ההעתקים נמצאים בטלגרם, לא במאגר שלנו; המנהל יכול למחוק אותם שם.</p>
+    <p><strong>מסירת המידע היא מרצון.</strong> אין חובה חוקית למסור לנו מידע. אם תתנגדו, הבוט לא יוכל לנהל את ההודעות שלכם בקבוצה, והמנהל רשאי לבחור כלי אחר.</p>
+
+    <h2>4. מה אנחנו לעולם לא עושים</h2>
+    <ul>
+      <li>שומרים תוכן הודעות, תמונות, שמות, שמות משתמש, מספרי טלפון או אנשי קשר.</li>
+      <li>משתמשים במידע לפרסום, לשירותי אנליטיקה, לבניית פרופילים או לאימון בינה מלאכותית.</li>
+      <li>מוכרים או משכירים מידע, או מצליבים אותו בין בוטים.</li>
+      <li>מקבלים לגביכם החלטות בעלות השפעה משפטית. מחיקות פועלות לפי כללי מנהל הקבוצה, ואם יומן המנהלים (/log) פעיל, מנהלים יכולים לשחזר פרסומים שנמחקו.</li>
+    </ul>
+
+    <h2>5. מי עוד מטפל במידע</h2>
+    <ul>
+      <li><strong>טלגרם</strong> מעבירה את כל ההודעות לבוט; על הפלטפורמה חלה <a href="https://telegram.org/privacy">מדיניות הפרטיות שלה</a>.</li>
+      <li><strong>Cloudflare, Inc.</strong> (ארה"ב) מארחת את הבוט ואת המאגר (Cloudflare Workers ו-D1) כמעבד מידע מטעמנו, לפי הסכם עיבוד הנתונים שלה. המיקום הראשי של המאגר הוא באירופה. העברות מתבססות על הסעיפים החוזיים התקניים של האיחוד האירופי ועל מסגרת פרטיות המידע בין האיחוד לארה"ב, לפי העניין.</li>
+      <li>רשויות, רק כשהחוק מחייב.</li>
+    </ul>
+
+    <h2>6. אבטחה</h2>
+    <p>המידע עובר בחיבורים מוצפנים (TLS) ומוצפן במנוחה אצל הספק. רק טלגרם יכולה לפנות לבוט (טוקן סודי מגן על החיבור). הגישה למערכות מוגבלת למפעיל. אנחנו שומרים מינימום מידע. אם אירוע אבטחה יסכן את המידע שלכם, נודיע לרשויות ולכם כפי שהחוק מחייב.</p>
+
+    <h2>7. הזכויות שלכם</h2>
+    <p>בהתאם למקום מגוריכם, אתם יכולים לבקש לעיין במידע, לקבל עותק, לתקן, למחוק, להגביל או להתנגד לעיבוד, ולחזור בכם מהסכמה כשאנחנו מסתמכים עליה.</p>
+    <ul>
+      <li><strong>מחיקה מיידית:</strong> שלחו לבוט <code>/forgetme</code> (בצ'אט פרטי או בקבוצה). רשומות שקשורות למזהה המשתמש שלכם נמחקות מיד, חוץ מטביעות של הפרסומים האחרונים שלכם ורישומי מגבלת פרסומים: אלה נשמרים עד שיפוג תוקפם (עד 30 יום ו-24 שעות), כדי שאי אפשר יהיה להשתמש במחיקה כדי לפרסם שוב את אותה מודעה או לאפס מגבלה.</li>
+      <li><strong>כל בקשה אחרת:</strong> כתבו ל-<a href="mailto:hartk11@gmail.com">hartk11@gmail.com</a>. איננו שומרים שמות, שמות משתמש או פרטי קשר, ולכן איננו יכולים לוודא מי שלח מייל. מסיבה זו בקשות הקשורות לחשבון הטלגרם שלכם נעשות דרך הבוט, שבו טלגרם מאשרת שזה אתם: <code>/mydata</code> מציג אילו סוגי מידע נשמרים עליכם, עם מספרים, ו-<code>/forgetme</code> (למעלה) מוחק אותו. בבקשות אחרות כתבו לנו; נסביר מה נשמר ואיך אפשר לטפל בזה, אך לא נמסור מידע המקושר למזהה טלגרם על סמך מייל בלבד. זה בחינם, ונשיב תוך 30 יום.</li>
+      <li><strong>מה מחיקה לא משיגה:</strong> העתקים בצ'אטים של מנהלים בטלגרם (המנהל יכול למחוק אותם), ספירות אנונימיות, ורישומים שהחוק מחייב לשמור.</li>
+      <li><strong>תלונות:</strong> אפשר להתלונן לרשות להגנת המידע במקום מגוריכם, לדוגמה הרשות להגנת הפרטיות בישראל, רשות פיקוח באיחוד האירופי, ה-ICO בבריטניה או ה-ANPD בברזיל. נשמח להזדמנות לתקן קודם.</li>
+    </ul>
+
+    <h2>8. ילדים</h2>
+    <p>הבוט אינו מיועד למי שמתחת לגיל 16, או מתחת לגיל 18 היכן שתנאי טלגרם מחייבים זאת. איננו אוספים מידע על גיל. אם לדעתכם נשמר מידע של ילד, הילד (או הורה, מחשבון הטלגרם של הילד) יכול לשלוח לבוט <code>/forgetme</code>; או כתבו לנו ונסביר את האפשרויות.</p>
+
+    <h2>9. היכן השירות מוצע</h2>
+    <p>השירות אינו מוצע לתושבי מדינות שחלות עליהן סנקציות ישראליות או בינלאומיות, כמפורט ב<a href="./terms/">תנאי השימוש</a>.</p>
+
+    <h2>10. שינויים ושפות</h2>
+    <p>אם המדיניות תשתנה, הגרסה והתאריך למעלה ישתנו, ושינויים מהותיים יפורסמו בעמוד הזה, וכשאפשר גם בפרופיל הבוט. המדיניות מתפרסמת באנגלית, בעברית וברוסית; במקרה של סתירה, הנוסח האנגלי קובע.</p>
+
+    <h2>11. יצירת קשר</h2>
+    <p>ישראל כהן · <a href="mailto:hartk11@gmail.com">hartk11@gmail.com</a></p>
+  </section>
+
+  <!-- ============================== RUSSIAN ============================== -->
+  <section id="ru" lang="ru" dir="ltr">
+    <div class="summary">
+      <strong>Коротко</strong>
+      <ul>
+        <li>Бот читает сообщения в группах, куда его добавили администраторы, чтобы удалять повторы и применять правила группы.</li>
+        <li>Он хранит односторонние отпечатки (хеши) и идентификаторы. Он никогда не хранит текст сообщений, фото, имена, юзернеймы или номера телефонов.</li>
+        <li>Большинство данных удаляется в течение 30 дней. Отправьте <code>/forgetme</code>, чтобы удалить то, что связано с вами.</li>
+        <li>Без рекламы, без систем аналитики, без обучения ИИ, без продажи данных.</li>
+      </ul>
+    </div>
+
+    <h2>1. Кто отвечает за данные</h2>
+    <p>NeatChat Keeper управляет Исраэль Коэн, частный разработчик (оператор данных). Контакт: <a href="mailto:hartk11@gmail.com">hartk11@gmail.com</a>. Ответственный за защиту данных не назначен, так как закон не требует этого для сервиса такого размера.</p>
+
+    <h2>2. Как работает бот и кто принимает решения</h2>
+    <p>Администратор группы добавляет бота и выбирает правила: сколько времени публикация считается повтором, ограничивать ли публикации на человека, какие ссылки разрешены и вести ли журнал удалённых сообщений. Бот действует по этим настройкам. Администраторам следует сообщить участникам, что группа модерируется ботом.</p>
+
+    <h2>3. Что мы обрабатываем, зачем и как долго</h2>
+    <div class="wrap"><table>
+      <tr><th>Данные</th><th>Цель</th><th>Правовое основание</th><th>Срок хранения</th></tr>
+      <tr><td>Сообщения в группе, как их передаёт Telegram</td><td>Вычисление отпечатков и проверка правил группы</td><td>Законный интерес: чистота группы по просьбе её администратора</td><td>Не хранятся. Обрабатываются только в памяти</td></tr>
+      <tr><td>Отпечатки: хеши SHA-256 нормализованного текста и ссылок; идентификаторы файлов Telegram для фото и файлов; вместе с ID группы, ID отправителя, ID сообщения и временем</td><td>Распознавание повторов</td><td>Законный интерес (см. выше)</td><td>Окно повторов группы (удаляются каждые несколько часов), не более 30 дней</td></tr>
+      <tr><td>Записи лимита публикаций: ID группы, ID пользователя, ID сообщения, время; для фотоальбомов — ID альбома и превышен ли лимит</td><td>Применение лимита «публикаций за 24 часа»</td><td>Законный интерес (см. выше)</td><td>Около 24 часов</td></tr>
+      <tr><td>Записи об удалении: ID группы, ID сообщения, время</td><td>Обработка каждого удаления один раз, даже если Telegram пришлёт то же сообщение дважды</td><td>Законный интерес (см. выше)</td><td>2 дня</td></tr>
+      <tr><td>Записи об альбомах: ID группы, ID альбома, ID первого сообщения альбома, хеш подписи альбома, время</td><td>Оценка фотоальбома как одной публикации (подпись есть только у одного фото); распознавание повторно отправленного альбома; одно уведомление на альбом</td><td>Законный интерес (см. выше)</td><td>2 дня</td></tr>
+      <tr><td>Частота журнала: ID группы, время (минута), число удалений за эту минуту, ID итогового сообщения в чате администратора журнала</td><td>Короткий журнал во время наплыва (итог вместо множества копий)</td><td>Законный интерес (см. выше)</td><td>Несколько часов</td></tr>
+      <tr><td>Данные группы: настройки, разрешённые сайты и ссылки-приглашения, число участников, ID привязанного канала; ID и языки приложения того, кто добавил бота, и администраторов, включивших журнал, начавших тест или получающих еженедельный отчёт; ID администраторов, сделавших его администратором, изменивших его права или использовавших команды</td><td>Работа бота в группе, меню администратора, еженедельные отчёты</td><td>Оказание услуги, запрошенной администратором</td><td>Пока бот в группе; удаляются через 90 дней после удаления бота или примерно через 9 месяцев после последнего сообщения в группе</td></tr>
+      <tr><td>Проверки администратора: является ли пользователь (администратор или участник) администратором группы</td><td>Разрешать команды администратора только администраторам и освобождать администраторов от правил группы</td><td>Законный интерес (безопасность)</td><td>Около 1 дня</td></tr>
+      <tr><td>Счётчики: удаления по группе за день; общее ежедневное использование бота</td><td>Отчёты администраторам; работа сервиса в пределах лимитов</td><td>Законный интерес</td><td>40 дней (по группе); 90 дней (использование)</td></tr>
+      <tr><td>Опрос при удалении бота: сколько администраторов выбрали каждый ответ</td><td>Улучшение бота</td><td>Не персональные данные (ID не хранятся)</td><td>Бессрочно</td></tr>
+      <tr><td>Если появятся платные функции: ID транзакции, товар, дата, ID плательщика, ID группы</td><td>Предоставление покупки, возвраты, учёт</td><td>Договор; обязанность по закону (налоговый учёт)</td><td>Столько, сколько требует налоговое право (до 7 лет)</td></tr>
+    </table></div>
+    <p>По отпечатку невозможно восстановить сообщение, но поскольку отпечатки хранятся вместе с ID пользователей, мы считаем их персональными данными и защищаем соответственно.</p>
+    <p><strong>Журнал администратора.</strong> Если администратор включает журнал (<code>/log</code>), каждое удалённое сообщение (в тестовом режиме — каждое, которое было бы удалено) копируется в его личный чат с ботом в Telegram. Эти копии находятся в Telegram, а не в нашей базе; администратор может удалить их там.</p>
+    <p><strong>Предоставление данных добровольно.</strong> Закон не обязывает вас передавать нам данные. Если вы возражаете, бот не сможет модерировать ваши сообщения в этой группе, и администратор может выбрать другой инструмент.</p>
+
+    <h2>4. Чего мы никогда не делаем</h2>
+    <ul>
+      <li>Не храним текст сообщений, фото, имена, юзернеймы, номера телефонов или контакты.</li>
+      <li>Не используем данные для рекламы, сервисов аналитики, профилирования или обучения ИИ.</li>
+      <li>Не продаём и не сдаём данные, не объединяем их между ботами.</li>
+      <li>Не принимаем решений с юридическими последствиями для вас. Удаления следуют правилам администратора группы, и если журнал (/log) включён, администраторы могут восстановить удалённые публикации.</li>
+    </ul>
+
+    <h2>5. Кто ещё обрабатывает данные</h2>
+    <ul>
+      <li><strong>Telegram</strong> доставляет все сообщения боту; к платформе применяется его <a href="https://telegram.org/privacy">политика конфиденциальности</a>.</li>
+      <li><strong>Cloudflare, Inc.</strong> (США) размещает бота и базу данных (Cloudflare Workers и D1) как наш обработчик по своему соглашению об обработке данных. Основное расположение базы — Европа. Передачи основаны на стандартных договорных условиях ЕС и рамочном соглашении ЕС-США о конфиденциальности данных, где применимо.</li>
+      <li>Органы власти — только если этого требует закон.</li>
+    </ul>
+
+    <h2>6. Безопасность</h2>
+    <p>Данные передаются по зашифрованным соединениям (TLS) и шифруются при хранении у нашего хостинга. Обращаться к боту может только Telegram (соединение защищено секретным токеном). Доступ к системам есть только у оператора. Мы храним минимум данных. Если инцидент безопасности создаст риск для ваших данных, мы уведомим органы и вас, как требует закон.</p>
+
+    <h2>7. Ваши права</h2>
+    <p>В зависимости от места проживания вы можете запросить доступ к данным, их копию, исправление, удаление, ограничение или возразить против обработки, а также отозвать согласие, если мы на него опираемся.</p>
+    <ul>
+      <li><strong>Удалить сейчас:</strong> отправьте боту <code>/forgetme</code> (в личном чате или в группе). Записи, связанные с вашим ID, удаляются сразу, кроме отпечатков ваших последних публикаций и записей лимита: они хранятся до истечения срока (не более 30 дней и 24 часов), чтобы удаление нельзя было использовать для повторной публикации того же объявления или сброса лимита.</li>
+      <li><strong>Любой другой запрос:</strong> напишите на <a href="mailto:hartk11@gmail.com">hartk11@gmail.com</a>. Мы не храним имён, юзернеймов и контактов, поэтому не можем проверить, кто прислал письмо. Именно поэтому запросы, связанные с вашим аккаунтом Telegram, идут через бота, где Telegram подтверждает, что это вы: <code>/mydata</code> показывает, какие данные о вас хранятся, с количеством, а <code>/forgetme</code> (см. выше) удаляет это. По другим запросам напишите нам: мы объясним, что хранится и что можно сделать, но не передадим данные, связанные с ID в Telegram, только на основании письма. Это бесплатно, ответ — в течение 30 дней.</li>
+      <li><strong>Что удаление не затрагивает:</strong> копии в чатах администраторов в Telegram (администратор может их удалить), анонимные счётчики и записи, которые закон обязывает хранить.</li>
+      <li><strong>Жалобы:</strong> вы можете обратиться в орган по защите данных, например в Управление по защите частной жизни Израиля, надзорный орган ЕС, ICO в Великобритании или ANPD в Бразилии. Будем благодарны, если сначала дадите нам возможность всё исправить.</li>
+    </ul>
+
+    <h2>8. Дети</h2>
+    <p>Бот не предназначен для лиц младше 16 лет или младше 18 лет там, где этого требуют условия Telegram. Мы не собираем сведения о возрасте. Если вы считаете, что хранятся данные ребёнка, ребёнок (или родитель — с аккаунта Telegram ребёнка) может отправить боту <code>/forgetme</code>; или напишите нам, и мы объясним варианты.</p>
+
+    <h2>9. Где предлагается сервис</h2>
+    <p>Сервис не предлагается жителям стран, на которые распространяются израильские или международные санкции, как указано в <a href="./terms/">Условиях</a>.</p>
+
+    <h2>10. Изменения и языки</h2>
+    <p>Если политика изменится, изменятся версия и дата выше, а о существенных изменениях будет объявлено на этой странице и, по возможности, в профиле бота. Политика опубликована на английском, иврите и русском; при расхождениях применяется английская версия.</p>
+
+    <h2>11. Контакт</h2>
+    <p>Исраэль Коэн · <a href="mailto:hartk11@gmail.com">hartk11@gmail.com</a></p>
+  </section>
+
+  <footer>
+    NeatChat Keeper · <a href="./terms/">Terms</a> · <a href="./about/">About</a> · <a href="mailto:hartk11@gmail.com">hartk11@gmail.com</a>
+  </footer>
+</main>
+</body>
+</html>

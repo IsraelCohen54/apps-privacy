@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NeatChat Keeper — Telegram group cleaner</title>
+<meta name="description" content="A Telegram bot that keeps any group free of repeated posts: sales, rentals, jobs, dating, events. Blocks invite links and limits reposts. Core features free.">
+<meta property="og:title" content="NeatChat Keeper">
+<meta property="og:description" content="Removes repeated posts, blocks invite links and limits reposts in Telegram groups.">
+<meta property="og:image" content="https://israelcohen54.github.io/apps-privacy/neatchat-keeper/about/logo-512.png">
+<link rel="icon" href="logo-512.png">
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1a1c1e; --muted: #5a5f66;
+    --rule: #e2e5e9; --accent: #2c5f8a; --card: #f5f7f9; --button: #1b6fd8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14171a; --fg: #e6e8eb; --muted: #a0a6ad;
+      --rule: #2a2f35; --accent: #7fb3d9; --card: #1c2025; --button: #1b6fd8;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 2.5rem 1.25rem 4rem;
+    background: var(--bg); color: var(--fg);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  main { max-width: 40rem; margin: 0 auto; }
+  header { display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; }
+  header img { width: 72px; height: 72px; border-radius: 50%; flex: none; }
+  h1 { font-size: 1.6rem; margin: 0; }
+  .tagline { color: var(--muted); margin: .15rem 0 0; }
+  nav { margin: 1rem 0 2rem; }
+  nav a { color: var(--accent); margin-inline-end: 1rem; font-weight: 600; text-decoration: none; }
+  section { border-top: 1px solid var(--rule); padding-top: 1.5rem; margin-top: 2rem; }
+  h2 { font-size: 1.1rem; margin: 1.5rem 0 .5rem; }
+  ul { padding-inline-start: 1.25rem; }
+  li { margin: .3rem 0; }
+  .presets { display: grid; gap: .6rem; padding: 0; list-style: none; }
+  .presets li { background: var(--card); border: 1px solid var(--rule); border-radius: 8px; padding: .7rem .9rem; margin: 0; }
+  .presets b { display: block; }
+  .cta { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.25rem 0 .5rem; }
+  .cta a {
+    display: inline-block; padding: .7rem 1.1rem; border-radius: 8px; font-weight: 600; text-decoration: none;
+    border: 1px solid var(--rule); color: var(--accent);
+  }
+  .cta a.primary { background: var(--button); border-color: var(--button); color: #fff; }
+  .small { color: var(--muted); font-size: .9rem; }
+  a { color: var(--accent); }
+  footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .88rem; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="logo-512.png" alt="">
+    <div>
+      <h1>NeatChat Keeper</h1>
+      <p class="tagline">Keeps Telegram groups clean · <a href="https://t.me/NeatChatKeeperBot">@NeatChatKeeperBot</a></p>
+    </div>
+  </header>
+  <nav><a href="#en">English</a><a lang="he" href="#he">עברית</a><a lang="ru" href="#ru">Русский</a><a href="../">Privacy</a><a href="../terms/">Terms</a></nav>
+
+  <section id="en" lang="en" dir="ltr">
+    <p>For any group where people post the same thing again: buy &amp; sell, rentals, jobs, dating profiles, events and communities.</p>
+    <ul>
+      <li><b>Removes repeated posts:</b> the same text, link, photo or file within the days you choose.</li>
+      <li><b>Blocks invite links</b> to other Telegram groups (your group's own links stay allowed once an admin posts them or adds them with /allow).</li>
+      <li><b>Limits posts</b> per person per 24 hours, and can allow links only to sites you approve.</li>
+      <li><b>Quiet:</b> the person whose post was removed gets a note only they can see. An admin can get a log with a Restore button (/log), and one admin gets a weekly report.</li>
+    </ul>
+    <h2>Start with one tap</h2>
+    <ul class="presets">
+      <li><b>📋 Listings &amp; ads</b>For sales, rentals, jobs, dating profiles… Repeats within 7 days are removed; invite links are blocked.</li>
+      <li><b>💬 Community chat</b>Repeats within 3 days; short texts aren't checked for repeats; links are free.</li>
+      <li><b>🛡 Strict</b>Repeats within 14 days, up to 3 posts per person per day, invite links blocked.</li>
+      <li><b>🧪 Try 24h without deleting</b>See what the bot would remove before you turn it on.</li>
+    </ul>
+    <div class="cta">
+      <a class="primary" href="https://t.me/NeatChatKeeperBot?startgroup=true&amp;admin=delete_messages">➕ Add to group</a>
+      <a href="https://t.me/NeatChatKeeperBot">Open the bot</a>
+    </div>
+    <p class="small">Core features free. The bot stores fingerprints (hashes), never your messages. <a href="../">Privacy policy</a></p>
+  </section>
+
+  <section id="he" lang="he" dir="rtl">
+    <p>לכל קבוצה שבה מפרסמים את אותו דבר שוב: קנייה ומכירה, השכרות, עבודות, פרופילי היכרויות, אירועים וקהילות.</p>
+    <ul>
+      <li><b>מוחק פרסומים חוזרים:</b> אותו טקסט, קישור, תמונה או קובץ בתוך מספר הימים שתבחרו.</li>
+      <li><b>חוסם קישורי הזמנה</b> לקבוצות טלגרם אחרות (הקישורים של הקבוצה שלכם מותרים אחרי שמנהל מפרסם אותם או מוסיף אותם עם /allow).</li>
+      <li><b>מגביל פרסומים</b> לאדם ב-24 שעות, ויכול להתיר קישורים רק לאתרים שאישרתם.</li>
+      <li><b>בשקט:</b> מי שהפרסום שלו נמחק מקבל הודעה שרק הוא רואה. מנהל יכול לקבל יומן עם כפתור שחזור (/log), ומנהל אחד מקבל דוח שבועי.</li>
+    </ul>
+    <h2>מתחילים בלחיצה אחת</h2>
+    <ul class="presets">
+      <li><b>📋 מודעות ופרסומים</b>למכירות, השכרות, עבודות, היכרויות… פרסומים חוזרים בתוך 7 ימים נמחקים; קישורי הזמנה נחסמים.</li>
+      <li><b>💬 קהילה ושיחות</b>פרסומים חוזרים בתוך 3 ימים; טקסטים קצרים לא נבדקים; קישורים חופשיים.</li>
+      <li><b>🛡 מחמיר</b>פרסומים חוזרים בתוך 14 ימים, עד 3 פרסומים לאדם ביום, קישורי הזמנה נחסמים.</li>
+      <li><b>🧪 ניסיון 24 שעות בלי למחוק</b>רואים מה הבוט היה מוחק לפני שמפעילים אותו.</li>
+    </ul>
+    <div class="cta">
+      <a class="primary" href="https://t.me/NeatChatKeeperBot?startgroup=true&amp;admin=delete_messages">➕ הוספה לקבוצה</a>
+      <a href="https://t.me/NeatChatKeeperBot">פתיחת הבוט</a>
+    </div>
+    <p class="small">התכונות הבסיסיות בחינם. הבוט שומר טביעות (גיבוב), אף פעם לא את ההודעות שלכם. <a href="../">מדיניות פרטיות</a></p>
+  </section>
+
+  <section id="ru" lang="ru" dir="ltr">
+    <p>Для любой группы, где публикуют одно и то же снова: продажа, аренда, работа, анкеты знакомств, события и сообщества.</p>
+    <ul>
+      <li><b>Удаляет повторы:</b> тот же текст, ссылку, фото или файл в течение выбранного числа дней.</li>
+      <li><b>Блокирует ссылки-приглашения</b> в другие группы Telegram (ссылки вашей группы разрешены, когда администратор опубликует их или добавит через /allow).</li>
+      <li><b>Ограничивает публикации</b> на человека за 24 часа и может разрешать ссылки только на одобренные сайты.</li>
+      <li><b>Тихо:</b> автор удалённой публикации получает заметку, видимую только ему. Администратор может получать журнал с кнопкой восстановления (/log), а один администратор — еженедельный отчёт.</li>
+    </ul>
+    <h2>Начните одним нажатием</h2>
+    <ul class="presets">
+      <li><b>📋 Объявления</b>Продажа, аренда, работа, знакомства… Повторы в течение 7 дней удаляются; приглашения блокируются.</li>
+      <li><b>💬 Чат сообщества</b>Повторы в течение 3 дней; короткие тексты не проверяются; ссылки свободны.</li>
+      <li><b>🛡 Строгий</b>Повторы в течение 14 дней, до 3 публикаций на человека в день, приглашения блокируются.</li>
+      <li><b>🧪 Попробовать 24 ч без удаления</b>Посмотрите, что бот удалил бы, прежде чем включать его.</li>
+    </ul>
+    <div class="cta">
+      <a class="primary" href="https://t.me/NeatChatKeeperBot?startgroup=true&amp;admin=delete_messages">➕ Добавить в группу</a>
+      <a href="https://t.me/NeatChatKeeperBot">Открыть бота</a>
+    </div>
+    <p class="small">Основные функции бесплатны. Бот хранит отпечатки (хеши), а не ваши сообщения. <a href="../">Политика конфиденциальности</a></p>
+  </section>
+
+  <footer>
+    NeatChat Keeper · <a href="../">Privacy</a> · <a href="../terms/">Terms</a> · <a href="mailto:hartk11@gmail.com">hartk11@gmail.com</a>
+  </footer>
+</main>
+</body>
+</html>
